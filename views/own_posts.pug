@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title All People's Posts
+        link(rel='stylesheet', href='/static/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/static/css/navbar.css')
+        link(rel='stylesheet', href='/static/css/all_posts.css')
+
+    body
+        .menu-collapsed
+            .bar
+            nav
+                ul
+                    li
+                        span
+                            a(href='/profile') Home
+                    li
+                        span
+                            a(href='/create_post') Create a Post
+                    li
+                        span
+                            a(href='#') See Own Posts
+                    li
+                        span
+                            a.active(href='all_posts') See All Posts
+                    li
+                        span
+                            a(href='/logout') Log Out   
+        #contact-me.contact.center
+            .container
+                .title
+                    h2.h2 My Own Messages
+                    .heading-line.center
+                .row.form-wrapper.border
+                    each message in allMessages
+                        .col-md-8.col-md-offset-2
+                            ul.form-group.has-feedback.name-group
+                                li.list-group-item #{message.message}
+        script(src="/static/js/jquery-3.1.1.min.js")
+        script(src="/static/js/navbar.js") 
