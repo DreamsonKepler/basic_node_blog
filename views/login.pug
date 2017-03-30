@@ -1,5 +1,5 @@
 doctype html
-html
+html(lang='en')
     head
         meta(charset='UTF-8')
         meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -13,14 +13,15 @@ html
                 $('#submit').click(function(event) {
                     if($('#user').val().trim().length === 0 || $('#password').val().trim().length === 0) {
                         event.preventDefault();
-                        $('#error-message').html("Your username or password is empty.");
+                        $('.error').html("<p>Your username or password is empty.</p>");
                     }
-                });
-            });                
-
+                })
+            })
+    //- h2#error-message= message
     body
         .login-wrap
             .login-html
+                div.error=message
                 input#tab-1.sign-in(type='radio', name='tab', checked='')
                 label.tab(for='tab-1') Sign In
                 |  
@@ -52,15 +53,15 @@ html
                             .group
                                 label.label(for='user') Username
                                 |  
-                                input#user.input(type='text')
+                                input#user.input(name='name', type='text')
                             .group
                                 label.label(for='password') Email Address
                                 |  
-                                input#password.input(type='text')
+                                input#password.input(name='email', type='text')
                             .group
                                 label.label(for='password') Password
                                 |  
-                                input#password.input(type='password', required, data-type='password')
+                                input#password.input(name= 'password', type='password', required, data-type='password')
                             .group
                                 label.label(for='pass') Repeat Password
                                 |  
@@ -70,7 +71,7 @@ html
                             .hr
                             .foot-lnk
                                 label(for='tab-1') Already Member?
-    h2#error-message= message
+    //- h2#error-message= message
 
 
 

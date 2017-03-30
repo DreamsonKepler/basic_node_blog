@@ -1,0 +1,173 @@
+/*all posts*/
+
+html {
+    color: #333;
+    font:600 16px/18px 'Open Sans',sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    font-size: 14px;
+}
+
+.h2, h2 {
+    color: black;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #555;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+}
+
+div {
+    display: block;
+}
+
+
+
+.container {
+    padding-left: 30px;
+    padding-top: 40px;
+}
+
+/*.contact {
+    padding-top: 80px;
+}*/
+
+.list-group-item {
+    text-align: left;
+    color: black;
+}
+
+.center {
+    text-align: center;
+}
+
+.contact .title h2 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.heading-line {
+    height: 3px;
+    width: 100px;
+    background: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.contact .form-group {
+    margin-right: 40px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact .name-group {
+    margin-bottom: 20px;
+}
+
+
+.contact .form-control {
+    color: #777;
+    min-height: 42px;
+    /*border: 1px solid #ccc;
+    border-radius: 0;*/
+}
+
+.contact .form-control + label {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.contact .form-response {
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+}
+
+.contact textarea {
+    resize: none;
+    height: 240px;
+}
+
+/*.row {
+    width: 750px; 
+    height: 600px;
+    padding: 0px;
+}*/
+
+.col-md-8.col-md-offset-2 {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.label {
+    font-size: 15px;
+    text-align: left !important;
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+}
+
+.btn {
+	text-transform:uppercase;
+    background:#76A8E8;
+    padding: 12px 12px;
+}
+
+#submit {
+    font-weight: bold;
+    color: black;
+}
+
+.border {
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+}
+
+.commentForm {
+    color:black;
+}
+
+.list-group-item:last-child {
+    padding-bottom: 80px;
+}
+
+.ul.form-group.has-feedback.name-group {
+    padding-right: 40px;
+}
+
+
+
+/*.row {
+    width: 1000px; 
+    height: 600px;
+    margin: 10px auto 10px auto;
+    padding: 0px;
+}*/
+
+/*#commentbox {
+    width: auto;
+    height: 50px;
+    color: #666;
+    margin: 10px;
+}*/

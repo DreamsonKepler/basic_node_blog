@@ -1,10 +1,30 @@
 doctype html
-html
-	head
-	body
-		h2= user.name
-		h3= user.email
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title My Profile
+        link(rel='stylesheet', href='/static/css/navbar.css')
 
-		a(href='/') home
-		br
-		a(href='/logout') log out
+    body
+        .menu-collapsed
+            .bar
+            nav
+                ul
+                    li
+                        span
+                            a.active(href='#') Home
+                    li
+                        span
+                            a(href='/create_post') Create a Post
+                    li
+                        span
+                            a(href='/own_posts') See Own Posts
+                    li
+                        span
+                            a(href='/all_posts') See All Posts
+                    li
+                        span
+                            a(href='/logout') Log Out    
+        script(src="/static/js/jquery-3.1.1.min.js")
+        script(src="/static/js/navbar.js")        

@@ -8,6 +8,28 @@ db.User = db.define('user', {
     password: Sequelize.STRING
 });
 
+// define Post Model
+db.Message = db.define('post', {
+    name: Sequelize.STRING,
+    email: Sequelize.STRING,
+    message: Sequelize.STRING
+})
+
+// define Comment Model
+db.Comment = db.define('comment', {
+    comment: Sequelize.STRING
+})
+
+db.User.hasMany(db.Message);
+db.User.hasMany(db.Comment);
+db.Message.belongsTo(db.User);
+db.Comment.belongsTo(db.User);
+db.Comment.belongsTo(db.Message);
+db.Message.hasMany(db.Comment);
+
+
+
+
 db.sync(
     {force: true}
 )
@@ -19,6 +41,13 @@ db.sync(
         }
         db.User.create(user1)
     })
+    // .then(function(db) {
+    //     const message1 = {
+    //         name: 'joop',
+    //         email: 'joop@gmail.com',
+    //         message: 'ik ben joop'
+    //     }
+    //     db.Post.create(message1)
     .catch( (error) => console.log(error));
 
 module.exports = db
